@@ -131,7 +131,5 @@ profiler <- function(matrix)
 # He surely likes Fear over Shame
 profiler(my_books)  
 
-# Anger      Fear  Hapiness    Sadness      Shame
-# Alice's Adventures in Wonderland, by Lewis Carroll        0.2543353 0.3352601 0.2196532 0.16763006 0.02312139
-# Metamorphosis, by Franz Kafka\nTranslated by David Wyllie 0.1897810 0.2700730 0.4817518 0.05839416 0.00000000
-# Picture of Dorian Gray, by Oscar Wilde                    0.2703777 0.3558648 0.2345924 0.10139165 0.03777336
+# Anger       Fear   Hapiness    Sadness      Shame 
+# 0.23816467 0.32039931 0.31199915 0.10913862 0.02029825 
