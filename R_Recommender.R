@@ -80,7 +80,7 @@ print (p)
 ## Testing
 # Create two users, one with random profile and one that reads more Happy books
 u1 = runif(5, 0, 1)
-u2 = c(.1,,1,1,,1,.1)
+u2 = c(.1,.1,1,.1,.1)
 
 #Normalize them
 u1 = u1/sum(u1)
@@ -116,3 +116,22 @@ recommend(u2)
 
 #Metamorphosis, by Franz Kafka\nTranslated by David Wyllie            0.4817518
 #Siddhartha, by Herman Hesse                                          0.4752475
+
+## Automatic evaluation of user profile. 
+# Let's say that user 3 reads books 1,2 & 3, what profiles this gives him. Well it's just
+
+my_books = p[1:3,]
+
+# A function to renurmalize the empirical frequencies of the books
+profiler <- function(matrix)
+{
+  r = colSums(matrix)
+  return(r/sum(r))
+}
+# He surely likes Fear over Shame
+profiler(my_books)  
+
+# Anger      Fear  Hapiness    Sadness      Shame
+# Alice's Adventures in Wonderland, by Lewis Carroll        0.2543353 0.3352601 0.2196532 0.16763006 0.02312139
+# Metamorphosis, by Franz Kafka\nTranslated by David Wyllie 0.1897810 0.2700730 0.4817518 0.05839416 0.00000000
+# Picture of Dorian Gray, by Oscar Wilde                    0.2703777 0.3558648 0.2345924 0.10139165 0.03777336
